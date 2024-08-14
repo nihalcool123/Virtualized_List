@@ -24,15 +24,17 @@ function VirtualizedList({ list, height, itemHeight, width }) {
                 {
                     visibleList.map((item, index) => {
                         return (
-                            <div className="item" style={{
-                                height: itemHeight,
-                                backgroundColor: 'lightcoral',
-                                borderTop: '2px solid grey',
-                                position: 'absolute',
-                                top: (indices[0] + index) * itemHeight,
-                                width: '100%',
-                                textAlign: 'center',
-                            }} >
+                            <div className="item"
+                                key={index}
+                                style={{
+                                    height: itemHeight,
+                                    backgroundColor: 'lightcoral',
+                                    borderTop: '2px solid grey',
+                                    position: 'absolute',
+                                    top: (indices[0] + index) * itemHeight,
+                                    width: '100%',
+                                    textAlign: 'center',
+                                }} >
                                 {"Item " + item}
                             </div>
 
